@@ -10,8 +10,7 @@ func main() {
 	weekDays = weekDays[copy(workDays, weekDays[:5]):]
 
 	// Display
-	fmt.Print("Weekends: ")
-	fmt.Println(weekDays)
-	fmt.Print("Working days: ")
-	fmt.Println(workDays)
+	fmt.Println("WeekDays:", weekDays)
+	fmt.Println("Working days:", workDays)
 }
+
