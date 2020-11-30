@@ -19,12 +19,9 @@ func main() {
 	// Show number of users
 	fmt.Println("Number of users:", len(items))
 
-	// Show how many books and magazines user has
-	users := make([]string, 0, len(items))
+	// Show how many books and how many magazines user has
 	for u := range items {
-		fmt.Print(u, ": ")
-		users = append(users, u)
-		count := len(items[u]["Books"]) + len(items[u]["Magazines"])
-		fmt.Println(count, "books and magazines")
+		fmt.Printf("%v: %v books, %v magazines\n", u, len(items[u]["Books"]), len(items[u]["Magazines"]))
 	}
 }
+
