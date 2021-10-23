@@ -17,10 +17,10 @@ func main() {
 
 	// open and close input file
 	fIn, err := os.Open(pathIn)
+	defer fIn.Close()
 	if err != nil {
 		fmt.Println("Reading input file error", err)
 	}
-	defer fIn.Close()
 
 	// create and close output file
 	fOut, err := os.Create(pathOut)
